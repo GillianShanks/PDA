@@ -5,8 +5,15 @@
 
 class CardGame
 
+  def initialize (cards)
+    @cards = cards
+  end
 
-  def checkforAce(card)
+  def card_count()
+    return @cards.count()
+  end
+
+  def check_for_ace(card)
     if card.value == 1
       return true
     else
