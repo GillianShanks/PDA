@@ -1,3 +1,4 @@
+require("pry")
 ### Testing task 2 code:
 
 # Carry out dynamic testing on the code below.
@@ -25,11 +26,12 @@ class CardGame
     end
   end
 
-  def self.cards_total(cards)
+  def cards_total()
     total = 0
-    for card in cards
+    for card in @cards
+      # binding.pry
       total += card.value
     end
-    return "You have a total of" + total
+    return "You have a total of #{total}" #changed format
   end
 end

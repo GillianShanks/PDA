@@ -29,4 +29,8 @@ class CardGameTest < MiniTest::Test
     assert_equal(@card1, @cardgame.highest_card(@card1, @card2))
   end
 
+  def test_get_total_value_of_cards()
+    assert_equal("You have a total of 4", @cardgame.cards_total())
+  end
+
 end
