@@ -20,4 +20,9 @@ class CardGameTest < MiniTest::Test
 
   end
 
+  def test_is_card_ace__false()
+    assert_equal(false, @cardgame.check_for_ace(@card1))
+
+  end
+
 end
