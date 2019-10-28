@@ -18,7 +18,11 @@ Calculator.prototype.multiply = function(number){
 }
 
 Calculator.prototype.divide = function(number){
-  this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+  if (parseFloat(number)){
+    this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+  } else {
+    this.runningTotal = "Cannot Divide By Zero"
+  }
 }
 
 Calculator.prototype.numberClick = function(number){
@@ -40,6 +44,7 @@ Calculator.prototype.operatorClick = function(operator){
 
   // if there was a previous operator recorded as having been clicked, perform
   // the operation for the previous operator
+
   if (this.previousTotal && this.previousOperator) {
     switch (this.previousOperator) {
       case ('+'):
